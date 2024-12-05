@@ -1,28 +1,14 @@
 from tkinter import *
-
-def open_cashier_window():
-    window.destroy()  # Close the current window
-    cashier_window = Tk()  # Create a new main window
-    cashier_window.title("Cashier")
-    cashier_window.geometry("800x600")  # Set size for the cashier window
-    Label(cashier_window, text="Welcome to the Cashier!", font=("Times New Roman", 16)).pack(pady=20)
-
-def open_inventory_window():
-    window.destroy()  # Close the current window
-    inventory_window = Tk()  # Create a new main window
-    inventory_window.title("Inventory")
-    inventory_window.geometry("800x600")  # Set size for the inventory window
-    Label(inventory_window, text="Welcome to the Inventory!", font=("Times New Roman", 16)).pack(pady=20)
-
-def open_supply_window():
-    window.destroy()  # Close the current window
-    supply_window = Tk()  # Create a new main window
-    supply_window.title("Supply")
-    supply_window.geometry("800x600")  # Set size for the supply window
-    Label(supply_window, text="Welcome to the Supply!", font=("Times New Roman", 16)).pack(pady=20)
+from cashier import open_cashier_window
+from inventory import open_inventory_window
+from supply import open_supply_window
 
 def exit_application():
     window.destroy()
+    username_entry.delete(0, END)
+    password_entry.delete(0, END)
+    error_label.config(text="")
+    login_window.deiconify()
 
 def create_button(text, command=None):
     button = Button(window,
@@ -41,15 +27,49 @@ def create_button(text, command=None):
                     )
     button.pack(pady=20, padx=20)  # Use pack layout with padding
 
-window = Tk()
-window.title("Arisu Inventory System")
-window.configure(bg="#97bcc7")  # Light blue background
-window.geometry("800x600")  # Set window size to 800x600 pixels
+def login():
+    username = username_entry.get()
+    password = password_entry.get()
 
-# Pass the function reference without parentheses
-create_button("Cashier", open_cashier_window)
-create_button("Inventory", open_inventory_window)
-create_button("Supply", open_supply_window)
-create_button("Exit", exit_application)
+    if username == "admin" and password == "password":
+        login_window.withdraw()
+        main_window()
+    else:
+        error_label.config(text="Invalid username or password")
 
-window.mainloop()
+def main_window():
+    global window
+    window = Tk()
+    window.title("Arisu Inventory System")
+    window.configure(bg="#97bcc7")  # Light blue background
+    window.geometry("800x600")  # Set window size to 800x600 pixels
+
+    create_button("Cashier", lambda: (window.withdraw(), open_cashier_window(window)))
+    create_button("Inventory", lambda: (window.withdraw(), open_inventory_window(window)))
+    create_button("Supply", lambda: (window.withdraw(), open_supply_window(window)))
+    create_button("Log Out", exit_application)
+
+    window.mainloop()
+
+login_window = Tk()
+login_window.title("Login")
+login_window.configure(bg="#97bcc7")  # Light blue background
+login_window.geometry("300x200")  # Set window size to 300x200 pixels
+
+username_label = Label(login_window, text="Username:", font=("Times New Roman", 15), bg="#97bcc7")
+username_label.pack(pady=10)
+username_entry = Entry(login_window, font=("Times New Roman", 15))
+username_entry.pack(pady=10)
+
+password_label = Label(login_window, text="Password:", font=("Times New Roman", 15), bg="#97bcc7")
+password_label.pack(pady=10)
+password_entry = Entry(login_window, font=("Times New Roman", 15), show="*")
+password_entry.pack(pady=10)
+
+error_label = Label(login_window, text="", font=("Times New Roman", 15), bg="#97bcc7", fg="red")
+error_label.pack(pady=10)
+
+login_button = Button(login_window, text="Login", font=("Times New Roman", 15), command=login)
+login_button.pack(pady=10)
+
+login_window.mainloop()
