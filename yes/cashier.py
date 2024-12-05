@@ -4,21 +4,21 @@ def open_cashier_window():
     window.destroy()  # Close the current window
     cashier_window = Tk()  # Create a new main window
     cashier_window.title("Cashier")
-    cashier_window.geometry("400x300")  # Set size for the cashier window
+    cashier_window.geometry("800x600")  # Set size for the cashier window
     Label(cashier_window, text="Welcome to the Cashier!", font=("Times New Roman", 16)).pack(pady=20)
 
 def open_inventory_window():
     window.destroy()  # Close the current window
     inventory_window = Tk()  # Create a new main window
     inventory_window.title("Inventory")
-    inventory_window.geometry("400x300")  # Set size for the inventory window
+    inventory_window.geometry("800x600")  # Set size for the inventory window
     Label(inventory_window, text="Welcome to the Inventory!", font=("Times New Roman", 16)).pack(pady=20)
 
 def open_supply_window():
     window.destroy()  # Close the current window
     supply_window = Tk()  # Create a new main window
     supply_window.title("Supply")
-    supply_window.geometry("400x300")  # Set size for the supply window
+    supply_window.geometry("800x600")  # Set size for the supply window
     Label(supply_window, text="Welcome to the Supply!", font=("Times New Roman", 16)).pack(pady=20)
 
 def exit_application():

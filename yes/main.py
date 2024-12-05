@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import ttk
-from sample import relative_to_assets
 
 # Create the main window
 window = tk.Tk()
