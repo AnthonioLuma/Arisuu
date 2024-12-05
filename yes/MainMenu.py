@@ -54,7 +54,7 @@ def main_window():
 login_window = Tk()
 login_window.title("Login")
 login_window.configure(bg="#97bcc7")  # Light blue background
-login_window.geometry("300x200")  # Set window size to 300x200 pixels
+login_window.geometry("800x600")  # Set window size to 300x200 pixels
 
 username_label = Label(login_window, text="Username:", font=("Times New Roman", 15), bg="#97bcc7")
 username_label.pack(pady=10)

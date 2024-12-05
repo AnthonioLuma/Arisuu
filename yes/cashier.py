@@ -1,6 +1,7 @@
 from tkinter import *
 
 def open_cashier_window(window):
+    
     cashier_window = Toplevel(window)  # Create a new Toplevel window
     cashier_window.title("Cashier")
     cashier_window.geometry("800x600")  # Set size for the cashier window
