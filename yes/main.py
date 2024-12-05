@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from sample import relative_to_assets
 
 # Create the main window
 window = tk.Tk()
@@ -13,8 +14,8 @@ logo_frame = tk.Frame(window, bg="#C0D6E4")
 logo_frame.pack(pady=20)
 
 # Add a placeholder for the logo (you'll need to replace this with your actual logo)
-logo_label = tk.Label(logo_frame, text="ARISU INVENTORY SYSTEM", font=("Arial", 24), bg="#C0D6E4")
-logo_label.pack(pady=20)
+logo_label = tk.Label(logo_frame, text="ARISU INVENTORY SYSTEM", font=("Arial", 20), bg="#C0D6E4")
+logo_label.grid(row=5,column=2)
 
 # Create the email field
 username = tk.Label(window, text="Username:", font=("Arial", 14), bg="#C0D6E4")
