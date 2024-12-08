@@ -1,0 +1,52 @@
+Functions:as requested by the program
+
+log in
+(Match input from or to table)(Table.user)
+-User
+-Password
+-btn function
+
+Reg
+(Input to table and retain)(Table.user)
+-User
+-Password(Link to Re-)
+-Re-Enter Password
+-Btn function
+
+Cashier Win
+-Search( check values from Table.product)
+-Cashier screen(different table container for checkout)
+Product name, category, quantity,Price(Treeview(Scroll))
+TEXT, TEXT, INT(INCREMENT,DECREMENT),(Price of n x qty)FLOAT)
+
+(Click.event(add 1 product=from search or from barcode))
+-Btn Functions
+--Inventory(Change window to Inv = Hide Cashier.win)
+--Remove Item from treeview = click(isolate)
+--Edit qty(change qty value)
+--Exit(Log out)
+
+Total = display total qty + (price,display)
+Payment Amount = (empty int box)
+Change = a-b = c (Total-PM= Change)
+
+Check out = Record data(decrement from inventory)
+Cancel = Clear table
+
+Inventory Win
+
+Search=(Check values from Table.product)
+Product name= TEXT
+Category =TEXT(Grouped)
+Price= INT, each(non stacked)
+Stock= stacking increment decrement from checkout and update 
+(Complete deletion if(Remove item))
+
+Cashier Button= Switch to Cashier Win(hide Inv)
+Update Item(must choose one item from treeview)
+Add Item(Must write on txtbox)
+EXIT=(Log out)
+
+Editing(Status),Adding(Status)
+
+Suggestion added function(Certain Threshold met = change color of Stock Txt add warning icon)

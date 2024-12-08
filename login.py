@@ -1,5 +1,8 @@
 from pathlib import Path
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
+from database import Main
+
+
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\TaysaMarkAnthony(Stu\Desktop\Arisuu\ASSETS\Login_assets\frame0")
 
@@ -49,8 +52,10 @@ entry_1.place(x=622.0,y=245.0,width=481.0,height=48.0)
 
 entry_image_2 = PhotoImage(file=relative_to_assets("entry_2.png"))
 entry_bg_2 = canvas.create_image(862.5,392.0,image=entry_image_2)
+
 entry_2 = Entry(bd=0,bg="#97BCC7",fg="#000716",highlightthickness=0)
 entry_2.place(x=622.0,y=367.0,width=481.0,height=48.0
 )
+
 window.resizable(False, False)
 window.mainloop()

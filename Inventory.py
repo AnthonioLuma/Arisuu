@@ -52,14 +52,6 @@ canvas.create_rectangle(
     outline="")
 
 canvas.create_rectangle(
-    45.0,
-    660.0,
-    1089.0,
-    712.0,
-    fill="#FFFFFF",
-    outline="")
-
-canvas.create_rectangle(
     0.0,
     0.0,
     1280.0,
@@ -155,74 +147,6 @@ image_1 = canvas.create_image(
     image=image_image_1
 )
 
-canvas.create_rectangle(
-    640.0,
-    616.0,
-    855.9771118164062,
-    661.0,
-    fill="#D9D9D9",
-    outline="")
-
-canvas.create_text(
-    708.6694946289062,
-    609.4285888671875,
-    anchor="nw",
-    text="Price:",
-    fill="#000000",
-    font=("RobotoRoman Regular", 16 * -1)
-)
-
-canvas.create_rectangle(
-    425.0,
-    616.0,
-    640.9771118164062,
-    660.9285697937012,
-    fill="#D9D9D9",
-    outline="")
-
-canvas.create_text(
-    502.72003173828125,
-    608.0,
-    anchor="nw",
-    text="Category",
-    fill="#000000",
-    font=("RobotoRoman Regular", 16 * -1)
-)
-
-canvas.create_rectangle(
-    45.0,
-    616.0,
-    426.0,
-    661.0,
-    fill="#D9D9D9",
-    outline="")
-
-canvas.create_text(
-    178.0,
-    610.0,
-    anchor="nw",
-    text="Product Name",
-    fill="#000000",
-    font=("RobotoRoman Regular", 16 * -1)
-)
-
-canvas.create_rectangle(
-    855.0,
-    616.0,
-    1089.0,
-    661.0,
-    fill="#D9D9D9",
-    outline="")
-
-canvas.create_text(
-    949.0,
-    621.0,
-    anchor="nw",
-    text="Stock:",
-    fill="#000000",
-    font=("RobotoRoman Regular", 16 * -1)
-)
-
 image_image_2 = PhotoImage(
     file=relative_to_assets("image_2.png"))
 image_2 = canvas.create_image(
@@ -265,6 +189,22 @@ entry_1.place(
     y=41.0,
     width=472.0,
     height=26.0
+)
+
+canvas.create_rectangle(
+    45.0,
+    660.0,
+    1089.0,
+    712.0,
+    fill="#FFFFFF",
+    outline="")
+
+image_image_5 = PhotoImage(
+    file=relative_to_assets("image_5.png"))
+image_5 = canvas.create_image(
+    567.0,
+    639.0,
+    image=image_image_5
 )
 
 entry_image_2 = PhotoImage(
@@ -347,12 +287,12 @@ entry_5.place(
     height=42.0
 )
 
-image_image_5 = PhotoImage(
-    file=relative_to_assets("image_5.png"))
-image_5 = canvas.create_image(
+image_image_6 = PhotoImage(
+    file=relative_to_assets("image_6.png"))
+image_6 = canvas.create_image(
     576.0,
     581.0,
-    image=image_image_5
+    image=image_image_6
 )
 
 canvas.create_text(
@@ -360,23 +300,6 @@ canvas.create_text(
     564.0,
     anchor="nw",
     text="Editing",
-    fill="#000000",
-    font=("RobotoRoman Regular", 16 * -1)
-)
-
-image_image_6 = PhotoImage(
-    file=relative_to_assets("image_6.png"))
-image_6 = canvas.create_image(
-    782.0,
-    58.0,
-    image=image_image_6
-)
-
-canvas.create_text(
-    599.0,
-    33.0,
-    anchor="nw",
-    text="User:",
     fill="#000000",
     font=("RobotoRoman Regular", 16 * -1)
 )
